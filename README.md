@@ -1,2 +1,2 @@
-# Johnsonm3890.github.io
+# johnsonm3890.github.io
 An HTML website about gardens
