@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    * {box-sizing: border-box}
+    a:link {
+        color: green;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: pink;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+
+
+    .navbar {
+        width: 100%;
+        background-color: #555;
+        overflow: auto;
+    }
+
+    .navbar a {
+        float: left;
+        padding: 12px;
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        width: 20%; /* Four links of equal widths */
+        text-align: center;
+    }
+
+    .navbar a:hover {
+        background-color: #000;
+    }
+
+    .navbar a.active {
+        background-color: #041aaa;
+    }
+
+    @media screen and (max-width: 500px) {
+        .navbar a {
+            float: none;
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main {
+        flex: 1; /* Takes up remaining space */
+        padding: 20px;
+    }
+
+    html{
+        margin:0;
+        padding:0;
+        height:100%;
+    }
+
+    body {
+        background-color: #2e2e2e;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin:0;
+        padding:0;
+        height:100%;
+    }
+
+    header {
+        background:#ff0;
+        padding:10px;
+    }
+    body {
+        padding: 5px 5px 60px;
+
+    }
+    footer {
+        height: 60px;
+        background: #6cf;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+
+        margin-bottom: 50px;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 3rem;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        color: #fff;
+        text-shadow: -4px 4px #ef3550,
+        -8px 8px #f48fb1,
+        -12px 12px #7e57c2,
+        -16px 16px #2196f3,
+        -20px 20px #26c6da,
+        -24px 24px #43a047,
+        -28px 28px #eeff41,
+        -32px 32px #f9a825,
+        -36px 36px #ff5722;
+    }
+
+    .prevent-select {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+    }
+
+
+    .center {
+        padding: 22px 0;
+    }
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+</head>
+
+<div class="container">
+
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="Table.html">Table</a>
+            <a href="Form.html">Form</a>
+            <a class="active" href="About.html">About</a>
+            <a href="https://github.com/Johnsonm3890/CTI110" target="_blank">Github</a>
+        </div>
+
+    <header class="prevent-select">
+        <h1>
+            About Me
+        </h1>
+    </header>
+    <main class="prevent-select">
+        <p style="text-align: center;">
+            Hi, I'm a web designer who sees the internet a bit like a garden-full of potential, color, and endless room to grow.<br>
+            My journey into web design began much like planting my first seed: with curiosity and a desire to build something from the ground up.<br>
+            Learning HTML and CSS gave me the tools to shape digital spaces, while Python introduced me to the logic and structure that brings those spaces to life.<br><br>
+
+            Just like in gardening, I've learned that patience, experimentation, and attention to detail are key.<br>
+            Whether I'm tending to a tricky bug in my code or coaxing a reluctant plant to bloom, I find joy in the process of creating and nurturing.<br>
+            My passion lies in blending natural inspiration with modern design-crafting websites that feel as organic and inviting as a well-loved garden.<br><br>
+
+            Gardening, for me, is a quiet form of creativity.<br>
+            There's something deeply satisfying about watching a seed become a blossom, or seeing a once-struggling plant thrive with the right care.<br>
+            It teaches mindfulness, resilience, and the importance of small, consistent efforts-lessons I carry with me into every design project.<br>
+            It's where I disconnect, recharge, and often find the ideas that later blossom into digital experiences.
+            <br>
+            <br>
+            <br>
+        </p>
+        <p style="text-align: center;font-size: larger">
+            Please contact me via <a href="mailto:johnsonm3890@student.faytechcc.edu">johnsonm3890@student.faytechcc.edu</a>
+        </p>
+
+    </main>
+    <footer class="center prevent-select">
+
+        Copyrights &#169;2025
+    </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

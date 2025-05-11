@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    * {box-sizing: border-box}
+    body {font-family: Arial, Helvetica, sans-serif;}
+
+    .navbar {
+        width: 100%;
+        background-color: #555;
+        overflow: auto;
+    }
+
+    .navbar a {
+        float: left;
+        padding: 12px;
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        width: 20%; /* Four links of equal widths */
+        text-align: center;
+    }
+
+    .navbar a:hover {
+        background-color: #000;
+    }
+
+    .navbar a.active {
+        background-color: #041aaa;
+    }
+
+    @media screen and (max-width: 500px) {
+        .navbar a {
+            float: none;
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+
+    body {
+        background-color: #2e2e2e;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+    .form-container {
+        width: 300px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #041aaa;
+        border-radius: 10px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    label {
+        color: white;
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="text"], select, textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    textarea {
+        height: 100px;
+    }
+    .comment-area {
+        background-color: #ffffff;
+    }
+    .buttons-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .submit-btn {
+        background-color: #32CD32;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+    }
+    .reset-btn {
+        background-color: #ff0000;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+    }
+    .dropdown, .radio-buttons {
+        background-color: rgb(0, 0, 0);
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main {
+        flex: 1;
+    }
+
+    html,
+    body {
+        margin:0;
+        padding:0;
+        height:100%;
+    }
+    container {
+        min-height:100%;
+        position:relative;
+    }
+    header {
+        background:#ff0;
+        padding:10px;
+    }
+
+    main {
+        /* Leaves room for footer */
+        padding: 20px 20px 60px;
+    }
+    footer {
+        /* Remove absolute positioning */
+        /* position: absolute; */
+        /* bottom: 0; */
+
+        width: 100%;
+        height: 60px;
+        background: #6cf;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+
+        margin-bottom: 50px;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 3rem;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        color: #fff;
+        text-shadow: -4px 4px #ef3550,
+        -8px 8px #f48fb1,
+        -12px 12px #7e57c2,
+        -16px 16px #2196f3,
+        -20px 20px #26c6da,
+        -24px 24px #43a047,
+        -28px 28px #eeff41,
+        -32px 32px #f9a825,
+        -36px 36px #ff5722;
+    }
+
+    .prevent-select {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+    }
+
+
+    .center {
+        padding: 22px 0;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Garden Report</title>
+</head>
+
+
+
+
+<div class="container">
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Table.html">Table</a>
+        <a class="active" href="Form.html">Form</a>
+        <a href="About.html">About</a>
+        <a href="https://github.com/Johnsonm3890/CTI110" target="_blank">Github</a>
+    </div>
+    <header class="prevent-select">
+        <h1>🌸 User Garden Report 🌸</h1>
+    </header>
+    <main class="prevent-select">
+        <form class="form-container" id="gardeningForm">
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <!-- Gardening Experience -->
+            <div class="form-group radio-buttons">
+                <label>Years of Gardening Experience</label>
+                <input type="radio" id="exp1" name="experience" value="0-1 years" required>
+                <label for="exp1">0–1 years</label><br>
+
+                <input type="radio" id="exp2" name="experience" value="2-4 years">
+                <label for="exp2">2–4 years</label><br>
+
+                <input type="radio" id="exp3" name="experience" value="5-9 years">
+                <label for="exp3">5–9 years</label><br>
+
+                <input type="radio" id="exp4" name="experience" value="10+ years">
+                <label for="exp4">10+ years</label>
+            </div>
+
+            <!-- Season Dropdown -->
+            <div class="form-group dropdown">
+                <label for="season">Which season do you plan to grow in?</label>
+                <select id="season" name="season" required>
+                    <option value="">-- Select a Season --</option>
+                    <option value="Spring">🌸 Spring</option>
+                    <option value="Summer">☀️ Summer</option>
+                    <option value="Fall">🍂 Fall</option>
+                    <option value="Winter">❄️ Winter</option>
+                </select>
+            </div>
+
+            <!-- Plant They'd Like to Grow -->
+            <div class="form-group">
+                <label for="plant">Plant You'd Like to Try Growing</label>
+                <input type="text" id="plant" name="plant" placeholder="e.g., Tomatoes, Lavender, Basil..." required>
+            </div>
+
+            <!-- Comment Area -->
+            <div class="form-group">
+                <label for="gardenComment">Why do you want to grow this plant?</label>
+                <textarea id="gardenComment" name="gardenComment" class="comment-area" placeholder="Share your thoughts..."></textarea>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons-container">
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+        </form>
+
+        <script>
+            // Reset functionality for the form on a page load
+            document.getElementById("gardeningForm").reset();
+        </script>
+    </main>
+    <footer class="center prevent-select">
+        Copyrights &#169;2025
+    </footer>
+</div>
+
+</html>
